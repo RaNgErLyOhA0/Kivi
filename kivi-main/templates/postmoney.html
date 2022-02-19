@@ -1,0 +1,78 @@
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.Post_money{
+    background-color: rgb(204, 255, 123);
+    text-align: center;
+    padding : 2px;
+    font-weight: bold;
+    border-radius: 10px;
+
+
+}
+
+.Error{
+    color: rgb(119, 0, 129);
+}
+
+</style>
+
+
+
+<body>
+
+<div class="Post_money">
+    <p>Post money | <a href="/user/{{name}}">Back</a></p>
+</div>    <hr>
+
+            
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="Error">
+            <p>{{ messages[0] }}</p>
+        </div>
+    {% endif %}
+    {% endwith %}  
+
+
+
+
+            <form action="/user/{{name}}/postmoney">
+                <div class="container">
+
+                <label for="name"><b>Name</b></label><br>
+                <input type="text" placeholder="Enter Name" name="postman" required><br><br>
+            
+                <label for="name"><b>value</b></label><br>
+                <input type="number" placeholder="Enter value" name="value" required>
+                  
+                <select name="valuename">
+                    <option>USD</option>
+                    <option>UAH</option>
+                    <option>RUB</option>
+                </select><br><br>
+    
+                
+              
+                  <button type="submit" class="registerbtn">Post</button>
+                </div>
+                
+            
+              </form>
+              
+              </body>
+              </html>
+
+
+
+
+
+</body>

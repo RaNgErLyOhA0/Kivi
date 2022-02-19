@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+
+    <title>account {{name}}</title>
+
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.giv_name {
+    background-color: rgb(204, 255, 123);
+    text-align: center;
+    padding : 2px;
+    font-weight: bold;
+    border-radius: 10px;
+
+
+}
+
+.logout{
+    text-align: right;
+    padding: 4px;
+}
+
+.money{
+    text-align: center  ;
+    padding: 4px;
+}
+
+</style>
+</head>
+<body>
+
+
+
+
+<div class="giv_name">
+    <p>Hello {{name}}! <a class="logout" href="/sing">Log out</a></p>
+</div>
+
+<div class="money">
+    <p>{{USD}}:USD | {{UAH}}:UAH | {{RUB}}:RUB</p>
+    <p><a href="/user/{{name}}/postmoney">Post money</a></p>  
+</div>
+
+
+
+<div>
+    
+</div>
+
+</body>
+</html>
